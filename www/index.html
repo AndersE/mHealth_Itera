@@ -28,6 +28,7 @@
         <link href="css/slider.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
 
+
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/jquery-2.0.3.min.js"></script>
         <script src="js/angular.min.js"></script>
@@ -48,11 +49,8 @@
         <div ng-app="HealthApp">
             <div ng-controller="HealthCtrl">
                 <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                    <div class="row">
-                    <div class="col-xs-1"></div>
-                    <div class="mainHeader col-xs-8">Din helse</div>
-                   <div class="col-xs-2"><img src="img/ico_header_color.svg"></div>
-                    </div>
+                    <span class="mainHeader">Din helse</span>
+                    <img src="img/ico_header_color.svg">
                 </nav>
                 <span class="effort">Målt bevegelse</span>
                 <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarValue}} %</progressbar></div>
