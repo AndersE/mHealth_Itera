@@ -10,6 +10,7 @@
     $scope.isFoodExpanded = false;
     $scope.isRestedExpanded = false;
     $scope.isHappinessExpanded = false;
+    $scope.oneAtATime = true;
 
     $('#ex1').slider({
         formater: function(value) {
@@ -47,6 +48,11 @@
         } else {
             $scope.isHappinessExpanded = true;
         }
+    };
+
+    $scope.status = {
+        isFirstOpen: true,
+        isFirstDisabled: false
     };
 });
 
