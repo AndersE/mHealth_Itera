@@ -26,6 +26,8 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/slider.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+
 
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/jquery-2.0.3.min.js"></script>
@@ -46,49 +48,70 @@
     <body>
         <div ng-app="HealthApp">
             <div ng-controller="HealthCtrl">
-                {{helloWorld}}
-                <progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar>
-                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                <div ng-click="expandChallenge()">
-                    <img src="img/ico_challenge_color.svg" ng-hide="isChallengeExpanded">
-                    <div ng-show="isChallengeExpanded">
-                        <ol>
-                            <li ng-repeat="q in challengeQuestions">
-                                {{q.Sporsmal}}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div ng-click="expandFood()">
-                    <img src="img/ico_foodchoice_color-01.svg" ng-hide="isFoodExpanded">
-                    <div ng-show="isFoodExpanded">
-                        <ol>
-                            <li ng-repeat="q in foodQuestions">
-                                {{q.Sporsmal}}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div ng-click="expandRested()">
-                    <img src="img/ico_rested_color-01.svg" ng-hide="isRestedExpanded">
-                    <div ng-show="isRestedExpanded">
-                        <ol>
-                            <li ng-repeat="q in restedQuestions">
-                                {{q.Sporsmal}}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div ng-click="expandHappiness()">
-                    <img src="img/ico_happiness_color-01.svg" ng-hide="isHappinessExpanded">
-                    <div ng-show="isHappinessExpanded">
-                        <ol>
-                            <li ng-repeat="q in restedQuestions">
-                                {{q.Sporsmal}}
-                            </li>
-                        </ol>
-                    </div>
-                </div>
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <span class="mainHeader">Din helse</span>
+                    <img src="img/ico_header_color.svg">
+                </nav>
+                <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar></div>
+                <div class="col-xs-12"><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+
+                <accordion close-others="oneAtATime">
+                    <accordion-group is-open="status.closed">
+                        <accordion-heading>
+                            <img src="img/ico_challenge_color.svg">
+                            <span>Utfordring</span>
+                        </accordion-heading>
+                            <div>
+                                <ol>
+                                    <li class="questions" ng-repeat="q in challengeQuestions">
+                                        {{q.Sporsmal}}
+                                    </li>
+                                </ol>
+                            </div>
+                    </accordion-group>
+
+                    <accordion-group is-open="status.closed">
+                        <accordion-heading>
+                            <img src="img/ico_foodchoice_color-01.svg">
+                            <span>Mat</span>
+                        </accordion-heading>
+                            <div>
+                                <ol>
+                                    <li class="questions" ng-repeat="q in foodQuestions">
+                                        {{q.Sporsmal}}
+                                    </li>
+                                </ol>
+                            </div>
+                    </accordion-group>
+
+                    <accordion-group is-open="status.closed">
+                        <accordion-heading>
+                            <img src="img/ico_rested_color-01.svg">
+                            <span>Utvilt</span>
+                        </accordion-heading>
+                            <div>
+                                <ol>
+                                    <li class="questions" ng-repeat="q in restedQuestions">
+                                        {{q.Sporsmal}}
+                                    </li>
+                                </ol>
+                            </div>
+                    </accordion-group>
+
+                    <accordion-group is-open="status.closed">
+                        <accordion-heading>
+                            <img src="img/ico_happiness_color-01.svg">
+                            Lykkelig?
+                        </accordion-heading>
+                            <div>
+                                <ol>
+                                    <li class="questions" ng-repeat="q in restedQuestions">
+                                        {{q.Sporsmal}}
+                                    </li>
+                                </ol>
+                            </div>
+                    </accordion-group>
+                </accordion>
             </div>
         </div>
 
