@@ -19,7 +19,7 @@
         } else {
             $scope.counter -= 1;
         }
-        $scope.progressbarValue = $scope.counter / 12 * 100;
+        $scope.progressbarValue = Math.ceil($scope.counter / 12 * 100);
         $scope.progressbarType = calculateService.calculateType($scope.progressbarValue);
     };
 
