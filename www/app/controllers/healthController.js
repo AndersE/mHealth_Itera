@@ -4,7 +4,7 @@
     $scope.foodQuestions = jsonService.food;
     $scope.restedQuestions = jsonService.rested;
     $scope.happinessQuestions = jsonService.happiness;
-    $scope.progressbarValue = 40;
+    $scope.progressbarValue = 20;
     $scope.progressbarType = calculateService.calculateType($scope.progressbarValue);
     $scope.isChallengeExpanded = false;
     $scope.isFoodExpanded = false;

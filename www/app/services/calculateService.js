@@ -4,13 +4,13 @@ angular.module('HealthApp.calculate', []).
             calculateType: function(value) {
                 var type;
                 if (value < 25) {
-                    type = 'success';
-                } else if (value < 50) {
-                    type = 'info';
-                } else if (value < 75) {
-                    type = 'warning';
-                } else {
                     type = 'danger';
+                } else if (value < 50) {
+                    type = 'warning';
+                } else if (value < 75) {
+                    type = 'info';
+                } else {
+                    type = 'success';
                 }
                 return type;
          }

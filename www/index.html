@@ -28,7 +28,6 @@
         <link href="css/slider.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
 
-
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/jquery-2.0.3.min.js"></script>
         <script src="js/angular.min.js"></script>
@@ -54,8 +53,10 @@
                 </nav>
                 <span class="effort">Målt bevegelse</span>
                 <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarValue}} %</progressbar></div>
-                <span class="effort">Treningsinnsats</span>
-                <div class="col-xs-12"><b>Ingen</b><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/><b>Maks</b></div>
+                <div class="slider">
+                    <span class="effort">Treningsinnsats</span>
+                    <div class="col-xs-12"><b>Ingen</b><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/><b>Maks</b></div>
+                </div>
 
                 <accordion close-others="oneAtATime">
                     <accordion-group>
@@ -66,7 +67,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in challengeQuestions">
-                                        {{q.Sporsmal}}
+                                        <input type="checkbox" ng-model="q.checkbox"> {{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -80,7 +81,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in foodQuestions">
-                                        {{q.Sporsmal}}
+                                        <input type="checkbox" ng-model="q.checkbox"> {{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -94,7 +95,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        {{q.Sporsmal}}
+                                        <input type="checkbox" ng-model="q.checkbox"> {{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -108,7 +109,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        {{q.Sporsmal}}
+                                        <input type="checkbox" ng-model="q.checkbox"> {{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
