@@ -49,5 +49,10 @@
             $scope.isHappinessExpanded = true;
         }
     };
+
+    $scope.status = {
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
 });
 

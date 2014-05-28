@@ -78,3 +78,15 @@
 .top-buffer {
     margin-top:40px;
 }
+
+.effort {
+    font: 20px/22px Arial;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    top: 10px;
+    position: relative;
+    padding-left: 14px;
+    padding-bottom: 20px;
+}

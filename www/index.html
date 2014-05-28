@@ -52,13 +52,13 @@
                     <span class="mainHeader">Din helse</span>
                     <img src="img/ico_header_color.svg">
                 </nav>
-                <div class="row top-buffer">
-                    <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar></div>
-                </div>
-                <div class="col-xs-12"><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+                <span class="effort">Målt bevegelse</span>
+                <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarValue}} %</progressbar></div>
+                <span class="effort">Treningsinnsats</span>
+                <div class="col-xs-12"><b>Ingen</b><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/><b>Maks</b></div>
 
                 <accordion close-others="oneAtATime">
-                    <accordion-group is-open="status.closed">
+                    <accordion-group>
                         <accordion-heading>
                             <img src="img/ico_challenge_color.svg">
                             <span>Utfordring</span>
@@ -72,7 +72,7 @@
                             </div>
                     </accordion-group>
 
-                    <accordion-group is-open="status.closed">
+                    <accordion-group>
                         <accordion-heading>
                             <img src="img/ico_foodchoice_color-01.svg">
                             <span>Mat</span>
@@ -86,7 +86,7 @@
                             </div>
                     </accordion-group>
 
-                    <accordion-group is-open="status.closed">
+                    <accordion-group>
                         <accordion-heading>
                             <img src="img/ico_rested_color-01.svg">
                             <span>Utvilt</span>
@@ -100,7 +100,7 @@
                             </div>
                     </accordion-group>
 
-                    <accordion-group is-open="status.closed">
+                    <accordion-group>
                         <accordion-heading>
                             <img src="img/ico_happiness_color-01.svg">
                             Lykkelig?
