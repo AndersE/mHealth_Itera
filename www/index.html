@@ -31,10 +31,13 @@
         <script src="js/angular.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/ui-bootstrap-0.7.0.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="app/app.js"></script>
         <script src="app/controllers/healthController.js"></script>
         <script src="app/services/healthService.js"></script>
+        <script src="app/services/jsonService.js"></script>
+        <script src="app/services/calculateService.js"></script>
 
         <title>Hello World</title>
     </head>
@@ -42,8 +45,8 @@
         <div ng-app="HealthApp">
             <div ng-controller="HealthCtrl">
                 {{helloWorld}}
+                <progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar>
             </div>
-            <progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar>
         </div>
 
     </body>
