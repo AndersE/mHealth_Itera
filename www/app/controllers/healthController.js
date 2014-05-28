@@ -4,13 +4,24 @@
     $scope.foodQuestions = jsonService.food;
     $scope.restedQuestions = jsonService.rested;
     $scope.happinessQuestions = jsonService.happiness;
-    $scope.progressbarValue = 20;
+    $scope.progressbarValue = 0;
     $scope.progressbarType = calculateService.calculateType($scope.progressbarValue);
     $scope.isChallengeExpanded = false;
     $scope.isFoodExpanded = false;
     $scope.isRestedExpanded = false;
     $scope.isHappinessExpanded = false;
     $scope.oneAtATime = true;
+    $scope.counter = 0;
+
+    $scope.changeType = function (input) {
+        if (input) {
+            $scope.counter += 1;
+        } else {
+            $scope.counter -= 1;
+        }
+        $scope.progressbarValue = $scope.counter / 12 * 100;
+        $scope.progressbarType = calculateService.calculateType($scope.progressbarValue);
+    };
 
     $('#ex1').slider({
         formater: function(value) {

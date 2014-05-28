@@ -50,8 +50,7 @@
             });
         </script>
 
-
-        <title>Din helse</title>
+        <title>Hello World</title>
     </head>
     <body>
         <div ng-app="HealthApp">
@@ -78,8 +77,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in challengeQuestions">
-                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
-                                        <span class="questions">{{q.Sporsmal}}</span>
+                                        <input type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">{{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -93,8 +91,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in foodQuestions">
-                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
-                                        <span class="questions">{{q.Sporsmal}}</span>
+                                        <input type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">{{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -108,8 +105,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
-                                        <span class="questions">{{q.Sporsmal}}</span>
+                                        <input type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">{{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
@@ -122,9 +118,8 @@
                         </accordion-heading>
                             <div>
                                 <ol>
-                                    <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
-                                        <span class="questions">{{q.Sporsmal}}</span>
+                                    <li class="questions" ng-repeat="q in happinessQuestions">
+                                        <input type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">{{q.Sporsmal}}
                                     </li>
                                 </ol>
                             </div>
