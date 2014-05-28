@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/slider.css" rel="stylesheet" />
@@ -43,15 +43,24 @@
         <script src="app/services/healthService.js"></script>
         <script src="app/services/jsonService.js"></script>
         <script src="app/services/calculateService.js"></script>
+        <script src="js/fastClick.js"></script>
+        <script>
+            $(document).ready(function() {
+                FastClick.attach(document.body);
+            });
+        </script>
 
-        <title>Hello World</title>
+
+        <title>Din helse</title>
     </head>
     <body>
         <div ng-app="HealthApp">
             <div ng-controller="HealthCtrl">
                 <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                    <span class="mainHeader">Din helse</span>
-                    <img src="img/ico_header_color.svg">
+                    <div class="col-xs-1"></div>
+                    <div class="mainHeader col-xs-7">Din helse</div>
+                    <div class="col-xs-2"><img src="img/ico_header_color.svg"></div>
+
                 </nav>
                 <span class="effort">Målt bevegelse</span>
                 <div class="col-xs-12"><progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarValue}} %</progressbar></div>
@@ -69,7 +78,8 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in challengeQuestions">
-                                        <input type="checkbox" ng-model="q.checkbox">{{q.Sporsmal}}
+                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
+                                        <span class="questions">{{q.Sporsmal}}</span>
                                     </li>
                                 </ol>
                             </div>
@@ -83,7 +93,8 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in foodQuestions">
-                                        <input type="checkbox" ng-model="q.checkbox">{{q.Sporsmal}}
+                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
+                                        <span class="questions">{{q.Sporsmal}}</span>
                                     </li>
                                 </ol>
                             </div>
@@ -97,7 +108,8 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input type="checkbox" ng-model="q.checkbox">{{q.Sporsmal}}
+                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
+                                        <span class="questions">{{q.Sporsmal}}</span>
                                     </li>
                                 </ol>
                             </div>
@@ -111,7 +123,8 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input type="checkbox" ng-model="q.checkbox">{{q.Sporsmal}}
+                                        <input class="checkbox-questions" type="checkbox" ng-model="q.checkbox">
+                                        <span class="questions">{{q.Sporsmal}}</span>
                                     </li>
                                 </ol>
                             </div>

@@ -60,7 +60,7 @@
 }
 
 .mainHeader{
-    font: 25px/30px Arial;
+    font: 30px/35px Arial;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -70,19 +70,27 @@
     padding-left: 14px;
 }
 
+.checkbox-questions{
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+}
+
 .questions {
     list-style:none;
-    cursor: pointer;
+    margin-left: 10px;
+    line-height: 4em;
+
 }
 
 .top-buffer {
-    margin-top:40px;
+    margin-top:20px;
 }
 
 .effort {
-    font: 20px/22px Arial;
+    font: 25px/28px Arial;
     color: black;
-    font-weight: bold;
     text-decoration: none;
     display: inline-block;
     top: 10px;
