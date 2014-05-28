@@ -28,7 +28,6 @@
         <link href="css/slider.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
 
-
         <script type="text/javascript" src="js/cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/jquery-2.0.3.min.js"></script>
@@ -120,11 +119,11 @@
                     <accordion-group>
                         <accordion-heading>
                             <img src="img/ico_happiness_color-01.svg">
-                            Lykkelig?
+                            Lykkelig
                         </accordion-heading>
                             <div>
                                 <ol>
-                                    <li class="questions" ng-repeat="q in restedQuestions">
+                                    <li class="questions" ng-repeat="q in happinessQuestions">
                                         <input class="checkbox-questions" id="lykkelig{{$index}}" type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">
                                         <label for="lykkelig{{$index}}" class="questions">{{q.Sporsmal}}</label>
                                     </li>
