@@ -25,6 +25,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/slider.css" rel="stylesheet" />
 
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/jquery-2.0.3.min.js"></script>
@@ -33,6 +34,7 @@
         <script src="js/ui-bootstrap-0.7.0.min.js"></script>
         <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
         <script src="js/angular-route.min.js"></script>
+        <script src="js/bootstrap-slider.js"></script>
         <script src="app/app.js"></script>
         <script src="app/controllers/healthController.js"></script>
         <script src="app/services/healthService.js"></script>
@@ -46,6 +48,47 @@
             <div ng-controller="HealthCtrl">
                 {{helloWorld}}
                 <progressbar class="progress-striped active" value="progressbarValue" type="{{progressbarType}}">{{progressbarType}}</progressbar>
+                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                <div ng-click="expandChallenge()">
+                    <img src="img/ico_challenge_color.svg" ng-hide="isChallengeExpanded">
+                    <div ng-show="isChallengeExpanded">
+                        <ol>
+                            <li ng-repeat="q in challengeQuestions">
+                                {{q.Sporsmal}}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div ng-click="expandFood()">
+                    <img src="img/ico_foodchoice_color-01.svg" ng-hide="isFoodExpanded">
+                    <div ng-show="isFoodExpanded">
+                        <ol>
+                            <li ng-repeat="q in foodQuestions">
+                                {{q.Sporsmal}}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div ng-click="expandRested()">
+                    <img src="img/ico_rested_color-01.svg" ng-hide="isRestedExpanded">
+                    <div ng-show="isRestedExpanded">
+                        <ol>
+                            <li ng-repeat="q in restedQuestions">
+                                {{q.Sporsmal}}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div ng-click="expandHappiness()">
+                    <img src="img/ico_happiness_color-01.svg" ng-hide="isHappinessExpanded">
+                    <div ng-show="isHappinessExpanded">
+                        <ol>
+                            <li ng-repeat="q in restedQuestions">
+                                {{q.Sporsmal}}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
 
