@@ -1,2 +1,2 @@
-﻿var HealthApp = angular.module('HealthApp', ['HealthApp.services','ui.bootstrap']);
+﻿var HealthApp = angular.module('HealthApp', ['HealthApp.services','ui.bootstrap', 'HealthApp.json', 'HealthApp.calculate']);
 
