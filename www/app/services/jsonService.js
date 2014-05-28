@@ -2,35 +2,35 @@ angular.module('HealthApp.json', []).
     factory('jsonService', function() {
         return {
             challenge: [
-                {"Sporsmal": "Tekst for spørsmål1",
+                {"Sporsmal": "Sykle til jobb",
                  "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål2",
+                {"Sporsmal": "Ta 10 push ups",
                  "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål3",
+                {"Sporsmal": "50 tåhev",
                  "checkbox": false}
             ],
             food: [
-                {"Sporsmal": "Tekst for spørsmål1",
+                {"Sporsmal": "Fem om dagen",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål2",
+                {"Sporsmal": "Ikke spist godteri",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål3",
+                {"Sporsmal": "Brokkoli til middag",
                     "checkbox": false}
             ],
             rested: [
-                {"Sporsmal": "Tekst for spørsmål1",
+                {"Sporsmal": "Sovet åtte timer i natt",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål2",
+                {"Sporsmal": "Sett på Hotel Cæsar",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål3",
+                {"Sporsmal": "Tatt power nap",
                     "checkbox": false}
             ],
             happiness: [
-                {"Sporsmal": "Tekst for spørsmål1",
+                {"Sporsmal": "Brukt en time på deg selv",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål2",
+                {"Sporsmal": "Spilt nok XBOX",
                     "checkbox": false},
-                {"Sporsmal": "Tekst for spørsmål3",
+                {"Sporsmal": "Ligget på sofaen",
                     "checkbox": false}
             ]
         }
