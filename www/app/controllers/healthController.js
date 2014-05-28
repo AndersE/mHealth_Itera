@@ -10,6 +10,7 @@
     $scope.isFoodExpanded = false;
     $scope.isRestedExpanded = false;
     $scope.isHappinessExpanded = false;
+    $scope.oneAtATime = true;
 
     $('#ex1').slider({
         formater: function(value) {
