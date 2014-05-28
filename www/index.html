@@ -45,9 +45,11 @@
         <script src="app/services/calculateService.js"></script>
         <script src="js/fastClick.js"></script>
         <script>
-            $(document).ready(function() {
-                FastClick.attach(document.body);
-            });
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            function onDeviceReady() {
+                    FastClick.attach(document.body);
+            }
         </script>
 
 
@@ -78,7 +80,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in challengeQuestions">
-                                        <input class="checkbox-questions" id="utfordring{{$index}}" type="checkbox" ng-model="q.checkbox">
+                                        <input class="checkbox-questions" id="utfordring{{$index}}" type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">
                                         <label for="utfordring{{$index}}" class="questions">{{q.Sporsmal}}</label>
                                     </li>
                                 </ol>
@@ -93,7 +95,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in foodQuestions">
-                                        <input class="checkbox-questions" id="mat{{$index}}" type="checkbox" ng-model="q.checkbox">
+                                        <input class="checkbox-questions" id="mat{{$index}}" type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">
                                         <label for="mat{{$index}}" class="questions">{{q.Sporsmal}}</label>
                                     </li>
                                 </ol>
@@ -108,7 +110,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input class="checkbox-questions" id="utvilt{{$index}}" type="checkbox" ng-model="q.checkbox">
+                                        <input class="checkbox-questions" id="utvilt{{$index}}" type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">
                                         <label for="utvilt{{$index}}" class="questions">{{q.Sporsmal}}</label>
                                     </li>
                                 </ol>
@@ -123,7 +125,7 @@
                             <div>
                                 <ol>
                                     <li class="questions" ng-repeat="q in restedQuestions">
-                                        <input class="checkbox-questions" id="lykkelig{{$index}}" type="checkbox" ng-model="q.checkbox">
+                                        <input class="checkbox-questions" id="lykkelig{{$index}}" type="checkbox" ng-model="q.checkbox" ng-change="changeType(q.checkbox)">
                                         <label for="lykkelig{{$index}}" class="questions">{{q.Sporsmal}}</label>
                                     </li>
                                 </ol>
